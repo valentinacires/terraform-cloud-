@@ -12,8 +12,6 @@ data "terraform_remote_state" "vpc" {
 output all {
     value = data.terraform_remote_state.vpc.outputs
 }
-
-resource "aws_db_subnet_group" "default" {
   name       = "terraform-cloud"
  
 resource "aws_db_instance" "default" {
