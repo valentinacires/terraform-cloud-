@@ -8,6 +8,27 @@ data "terraform_remote_state" "vpc" {
     }
   }
 }
+data "terraform_remote_state" "rds" {
+  backend = "remote"
+
+  config = {
+    organization = "valentinacires"
+    workspaces = {
+      name = "rds"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
